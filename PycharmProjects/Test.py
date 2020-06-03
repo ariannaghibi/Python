@@ -8,8 +8,9 @@ character_age = "85"
 print("There once was a man named " + character_name.upper() + ".")
 print("He was " + character_age + " years old.")
 print("He really liked the name " + character_name.capitalize() + ".")
-print("But didn't like to be " + character_age + ".")
+print(f"But didn't like to be {character_age}.")
 print("hello\nhow are you")
+print('x' in character_name)
 print(len(character_name) + len(character_age))
 print(character_name[2])
 print(character_name.index('n'))
@@ -22,11 +23,13 @@ print(abs(my_age))
 print(pow(2, 3))
 print(max(4, 6, 9))
 print(min(4, 6, 9))
-print(round(3.49))
+print(round(5.49))
+print(10**3)
+print(10//3)
 from math import *
-
-print(floor(3.9))
-print(ceil(3.1))
+# or import math and use prefix "math."
+print(floor(4.9))
+print(ceil(4.1))
 print(sqrt(100))
 print("---------------------------------------------------")
 
@@ -135,30 +138,22 @@ print(monthconversion.get("Jan"))
 print(monthconversion[2])
 print(monthconversion.get("Feb", "Invalid Key"))
 print("---------------------------------------------------")
+try:
+    code = {"1":"One", "2":"Two", "3":"Three", "4":"Four"}
+    # entered_code = input("Phone: ")
+    new_code = ""
+    for digit in entered_code:
+        new_code = new_code + code.get(digit) + " "
+    print(new_code)
+except NameError as err:
+    print(err)
+print("---------------------------------------------------")
 
 i = 1
 while i < 3:
     print(i)
     i += 1
 print("Done with loop")
-print("---------------------------------------------------")
-
-secret_word = "giraffe"
-guess_word = ""
-guess_count = 0
-guess_limit = 3
-out_of_guesses = False
-while guess_word != secret_word and not (out_of_guesses):
-    if guess_count < guess_limit:
-        # guess_word = input("Guess: ")
-        guess_count += 1
-    else:
-        out_of_guesses = True
-
-if out_of_guesses:
-    print("YOU LOSE!")
-else:
-    print("YOU WIN!")
 print("---------------------------------------------------")
 
 for letter in "Arian":
@@ -200,29 +195,6 @@ for element in number_grid:
         print(sub_element)
 print("---------------------------------------------------")
 
-
-# word = input("Enter a name: ")
-def vowel(word):
-    translation = ""
-    for letter in word:
-        if letter.islower():
-            if letter in "aeiou":
-                translation = translation + 'g'
-            else:
-                translation = translation + letter
-        elif letter.isupper():
-            if letter in "AEIOU":
-                translation = translation + 'G'
-            else:
-                translation = translation + letter
-        else:
-            translation = translation + letter
-    return translation
-
-
-# print(vowel(word))
-print("---------------------------------------------------")
-
 try:
     10 / 1
     # number = int(input("Enter a number: "))
@@ -241,9 +213,15 @@ print(employee_file.readlines()[1])
 employee_file.close()
 print("---------------------------------------------------")
 
-import useful_tools
-
+from Tools_Package import useful_tools
+# from Tools_Package.useful_tools import roll_dice
 print(useful_tools.roll_dice(5))
+
+result = useful_tools.Dice(1, 1)
+print(result.roll_both_dice())
+
+members = ["John Lenon", "Paul McCartney", "George Harrison", "Ringo Star"]
+print(useful_tools.rand_name_pick(members))
 print("---------------------------------------------------")
 
 from Class import Student
@@ -255,38 +233,75 @@ print(student2.is_on_probation)
 print(student1.is_on_honor_roll())
 print("---------------------------------------------------")
 
-question_prompts = [
-    "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
-    "What color are bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
-    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
-]
-
-from Class import Question
-
-questions = [
-    Question(question_prompts[0], "a"),
-    Question(question_prompts[1], "c"),
-    Question(question_prompts[2], "b"),
-]
-
-
-def run_test(questions):
-    score = 0
-    for question in questions:
-        user_answer = input(question.prompt)
-        if user_answer == question.answer:
-            score += 1
-    print("You got " + str(score) + "/" + str(len(question_prompts)))
-# run_test(questions)
-print("---------------------------------------------------")
-
 from Class import Chef
 from Class import PersianChef
 
-myChef = Chef()
-myPersianChef = PersianChef()
+my_chef = Chef()
+my_persian_chef = PersianChef()
 
-myChef.make_chicken()
-myPersianChef.make_salad()
-myPersianChef.make_stew()
+my_chef.make_chicken()
+my_persian_chef.make_salad()
+my_persian_chef.make_stew()
 print("---------------------------------------------------")
+
+numbers = [5, 2, 5, 2, 2]
+for number in numbers:
+    output = ""
+    for element in range(number):
+        output = output + 'x'
+    print(output)
+print("---------------------------------------------------")
+
+numbers = [8, 2, 3, 4, 5]
+print(max(numbers))
+#Alternative Solution
+def max_num(numbers):
+    max = numbers[0]
+    for number in numbers:
+        if number > max:
+            max = number
+    return max
+print(max_num(numbers))
+print("---------------------------------------------------")
+
+numbers = [2, 2, 4, 6, 3, 4, 6, 1, 2, 2]
+def dup_remover(numbers):
+    non_dup_list = []
+    for number in numbers:
+        if number not in non_dup_list:
+            non_dup_list.append(number)
+    return non_dup_list
+print(dup_remover(numbers))
+print("---------------------------------------------------")
+
+coordinates = [1, 2, 3]
+x, y, z = coordinates
+print(x, y, z)
+print("---------------------------------------------------")
+
+def emoji_converter (message):
+    words = message.split()
+    print(words)
+    emojis = {
+    ":)": ":)",
+    ":(": ":("
+    }
+    output = ""
+    for word in words:
+        output = output + emojis.get(word, word) + " "
+    return output
+
+# message = input(">")
+# print(emoji_converter(message))
+print("---------------------------------------------------")
+
+from pathlib import Path
+
+path = Path("Tools_Package")
+print(path.exists())
+
+path2 = Path()
+for file in path2.glob('*.py'):
+    print(file)
+print("---------------------------------------------------")
+
