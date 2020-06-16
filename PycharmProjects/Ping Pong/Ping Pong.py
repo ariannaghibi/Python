@@ -4,7 +4,7 @@ import winsound
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.setup(width=800, height=600)
-wn.title("Ping Ping")
+wn.title("Ping-Ping Game by Arian Naghibi")
 
 # Score
 score_a = 0
@@ -46,33 +46,25 @@ ball.color("white")
 # Pull the pen up – no drawing when moving
 ball.penup()
 ball.setpos(0, 0)
-ball.dx = 0.2
-ball.dy = 0.2
+ball.dx = 0.4
+ball.dy = 0.4
 
 
 # Functions
 def paddle_a_up():
-    y = paddle_a.ycor()
-    y += 20
-    paddle_a.sety(y)
+    paddle_a.sety(paddle_a.ycor() + 20)
 
 
 def paddle_a_down():
-    y = paddle_a.ycor()
-    y += -20
-    paddle_a.sety(y)
+    paddle_a.sety(paddle_a.ycor() - 20)
 
 
 def paddle_b_up():
-    y = paddle_b.ycor()
-    y += 20
-    paddle_b.sety(y)
+    paddle_b.sety(paddle_b.ycor() + 20)
 
 
 def paddle_b_down():
-    y = paddle_b.ycor()
-    y += -20
-    paddle_b.sety(y)
+    paddle_b.sety(paddle_b.ycor() - 20)
 
 
 # keyboard binding
@@ -87,7 +79,6 @@ wn.tracer(0, 0)
 while True:
     # Perform a TurtleScreen manual update. To be used when tracer is turned off.
     wn.update()
-
     # Move the ball
     ball.setpos(ball.xcor() + ball.dx, ball.ycor() + ball.dy)
 
@@ -129,5 +120,3 @@ while True:
         winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
     else:
         pass
-
-
