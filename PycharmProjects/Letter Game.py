@@ -1,4 +1,6 @@
 word = input("Enter a name: ")
+
+
 def vowel(word):
     translation = ""
     for letter in word:
@@ -15,4 +17,6 @@ def vowel(word):
         else:
             translation = translation + letter
     return translation
+
+
 print(vowel(word))

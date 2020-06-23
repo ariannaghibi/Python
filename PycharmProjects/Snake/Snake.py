@@ -8,7 +8,6 @@ wn.title("Snake Game by Arian Naghibi")
 wn.bgpic("grass.gif")
 wn.setup(width=600, height=600)
 
-
 # Food
 food = turtle.Turtle()
 food.speed(0)
@@ -71,6 +70,7 @@ game_over.penup()
 game_over.hideturtle()
 game_over.setpos(0, 0)
 
+
 # Functions
 def move_left():
     if snake_head.direction != "right":
@@ -112,7 +112,6 @@ wn.onkeypress(move_right, "Right")
 wn.onkeypress(move_up, "Up")
 wn.onkeypress(move_down, "Down")
 
-
 wn.tracer(0, 0)
 while True:
     wn.update()
@@ -130,7 +129,7 @@ while True:
         score_board.write(f"Score: {str(score)}     High Score: {str(high_score)}", align="center",
                           font=("Arial", 16, "bold"))
 
-    # Add a segment
+        # Add a segment
         new_segment = turtle.Turtle()
         new_segment.speed(0)
         wn.register_shape("snake body.gif")
@@ -169,8 +168,8 @@ while True:
                     boulder3.setpos(random.randint(-280, 280), random.randint(-280, 280))
 
     # Move the end segments first in reverse order
-    for segment in range(len(segments)-1, 0, -1):
-        segments[segment].setpos(segments[segment-1].xcor(), segments[segment-1].ycor())
+    for segment in range(len(segments) - 1, 0, -1):
+        segments[segment].setpos(segments[segment - 1].xcor(), segments[segment - 1].ycor())
 
     # Move segment 0 to where the head is
     if len(segments) > 0:
@@ -257,4 +256,3 @@ while True:
             score_board.clear()
             score_board.write(f"Score: {str(score)}     High Score: {str(high_score)}", align="center",
                               font=("Arial", 16, "bold"))
-

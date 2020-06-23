@@ -24,9 +24,10 @@ print(pow(2, 3))
 print(max(4, 6, 9))
 print(min(4, 6, 9))
 print(round(5.49))
-print(10**3)
-print(10//3)
+print(10 ** 3)
+print(10 // 3)
 from math import *
+
 # or import math and use prefix "math."
 print(floor(4.9))
 print(ceil(4.1))
@@ -139,7 +140,7 @@ print(monthconversion[2])
 print(monthconversion.get("Feb", "Invalid Key"))
 print("---------------------------------------------------")
 try:
-    code = {"1":"One", "2":"Two", "3":"Three", "4":"Four"}
+    code = {"1": "One", "2": "Two", "3": "Three", "4": "Four"}
     # entered_code = input("Phone: ")
     new_code = ""
     for digit in entered_code:
@@ -214,6 +215,7 @@ employee_file.close()
 print("---------------------------------------------------")
 
 from Tools_Package import useful_tools
+
 # from Tools_Package.useful_tools import roll_dice
 print(useful_tools.roll_dice(5))
 
@@ -244,6 +246,7 @@ my_persian_chef.make_salad()
 my_persian_chef.make_stew()
 print("---------------------------------------------------")
 
+# Print F using x
 numbers = [5, 2, 5, 2, 2]
 for number in numbers:
     output = ""
@@ -252,25 +255,35 @@ for number in numbers:
     print(output)
 print("---------------------------------------------------")
 
+# find a max number in a list
 numbers = [8, 2, 3, 4, 5]
 print(max(numbers))
-#Alternative Solution
+
+
+# Alternative Solution
 def max_num(numbers):
     max = numbers[0]
     for number in numbers:
         if number > max:
             max = number
     return max
+
+
 print(max_num(numbers))
 print("---------------------------------------------------")
 
+# Remove duplicates in a list
 numbers = [2, 2, 4, 6, 3, 4, 6, 1, 2, 2]
+
+
 def dup_remover(numbers):
     non_dup_list = []
     for number in numbers:
         if number not in non_dup_list:
             non_dup_list.append(number)
     return non_dup_list
+
+
 print(dup_remover(numbers))
 print("---------------------------------------------------")
 
@@ -279,20 +292,23 @@ x, y, z = coordinates
 print(x, y, z)
 print("---------------------------------------------------")
 
-def emoji_converter (message):
+
+# emoji convertor using dictionary
+def emoji_converter():
+    message = input(">")
     words = message.split()
     print(words)
     emojis = {
-    ":)": "☺",
-    ":(": "☹"
+        ":)": "☺",
+        ":(": "☹"
     }
     output = ""
     for word in words:
         output = output + emojis.get(word, word) + " "
     return output
 
-# message = input(">")
-# print(emoji_converter(message))
+
+# print(emoji_converter())
 print("---------------------------------------------------")
 
 from pathlib import Path
@@ -305,3 +321,43 @@ for file in path2.glob('*.py'):
     print(file)
 print("---------------------------------------------------")
 
+# Write a function to get the first n odd numbers from a list
+list1 = [10, 21, 4, 45, 66, 93, 67, 93, 74, 100, 33, 49]
+list2 = []
+for num in list1:
+    if num % 2 != 0 and len(list2) < 4:
+        list2.append(num)
+print(list2)
+print("---------------------------------------------------")
+
+# Stack
+list1 = [10, 21, 4, 45, 66, 93, 67, 93, 74, 100, 33, 49]
+list2 = []
+i = 0
+while i < len(list1):
+    list2.append(list1.pop(-1))
+print(list2)
+print("---------------------------------------------------")
+
+# Queue
+list1 = [10, 21, 4, 45, 66, 93, 67, 93, 74, 100, 33, 49]
+list2 = []
+i = 0
+while i < len(list1):
+    list2.append(list1.pop(0))
+print(list2)
+print("---------------------------------------------------")
+
+
+# Palindrome
+def palindrome():
+    while True:
+        string = input(("Enter a string:"))
+        if string == string[::-1]:
+            print("The string is a palindrome")
+        else:
+            print("Not a palindrome")
+
+
+# palindrome()
+print("---------------------------------------------------")

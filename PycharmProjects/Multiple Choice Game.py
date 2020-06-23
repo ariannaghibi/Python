@@ -1,3 +1,5 @@
+from Class import Question
+
 question_prompts = [
     "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
     "What color are bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
@@ -15,8 +17,6 @@ question_prompts = [
 (b) Red
 (c) Orange\n\n'''
 ]
-
-from Class import Question
 
 questions = [
     Question(question_prompts[0], "a"),
