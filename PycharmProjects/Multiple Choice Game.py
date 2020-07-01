@@ -1,3 +1,5 @@
+# Create a multiple choice questionnaire and display the score
+
 from Class import Question
 
 question_prompts = [
@@ -35,4 +37,6 @@ def run_test(questions):
         if user_answer == question.answer:
             score += 1
     print("You got " + str(score) + "/" + str(len(question_prompts)))
+
+
 run_test(questions)

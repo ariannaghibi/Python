@@ -28,6 +28,7 @@ class Chef:
     def make_special_dish(self):
         print("The chef makes bbq ribs")
 
+
 class PersianChef(Chef):
     def make_stew(self):
         print("The Persian chef makes a Ghormeh Sabzi")

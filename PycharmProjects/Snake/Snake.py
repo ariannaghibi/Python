@@ -1,8 +1,10 @@
+# Create a snake game in which the snake grows as it eats the food and dies if it crash into either walls or obstacles
 import turtle
 import time
 import random
 import winsound
 
+# Create and customize the window
 wn = turtle.Screen()
 wn.title("Snake Game by Arian Naghibi")
 wn.bgpic("grass.gif")

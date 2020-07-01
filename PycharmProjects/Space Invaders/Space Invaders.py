@@ -1,3 +1,4 @@
+# Create a space game in which aliens and asteroids constantly flying down. The player needs to kill as many aliens as he can before getting destroyed by either aliens or asteroids
 import pygame
 import random
 import math
@@ -9,6 +10,7 @@ pygame.display.set_caption('Space Invaders Game by Arian Naghibi')
 icon = pygame.image.load('spaceship.png')
 pygame.display.set_icon(icon)
 background = pygame.image.load('space.png')
+clock = pygame.time.Clock()
 
 # Player
 player_jet = pygame.image.load('jet.png')
@@ -147,6 +149,7 @@ while running:
         if high_score < score:
             high_score = score
         score = 0
+    clock.tick(100)
     screen.fill((0, 0, 0))
     screen.blit(background, (0, 0))
     player(playerX, playerY)

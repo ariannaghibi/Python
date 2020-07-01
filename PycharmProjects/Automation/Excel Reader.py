@@ -1,11 +1,13 @@
+# Create a program to read thousands of spread-sheets
 import openpyxl as xl
 from openpyxl.chart import BarChart3D, Reference, PieChart
 
 
 def sales_func(filename):
+    # Load the file and the sheet tab
     wb = xl.load_workbook(filename)
     sheet = wb['Sheet1']
-
+    # Create a new price column based on the original price
     for row in range(2, sheet.max_row + 1):
         cell = sheet.cell(row, 3)
         corrected_price = cell.value * 0.9
@@ -24,8 +26,8 @@ def sales_func(filename):
     sheet.add_chart(chart, 'E2')
 
     # Pie chart
-    quantities = Reference(sheet, min_row=1, max_row=4, min_col=13, max_col=13)
-    labels = Reference(sheet, min_row=2, max_row=4, min_col=12, max_col=12)
+    quantities = Reference(sheet, min_row=1, max_row=5, min_col=13, max_col=13)
+    labels = Reference(sheet, min_row=2, max_row=5, min_col=12, max_col=12)
     chart2 = PieChart()
     chart2.title = 'Pie Chart'
     chart2.add_data(quantities, titles_from_data=True)

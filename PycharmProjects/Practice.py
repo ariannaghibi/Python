@@ -138,6 +138,8 @@ monthconversion = {
 print(monthconversion.get("Jan"))
 print(monthconversion[2])
 print(monthconversion.get("Feb", "Invalid Key"))
+monthconversion[2] = "March"
+print(monthconversion[2])
 print("---------------------------------------------------")
 try:
     code = {"1": "One", "2": "Two", "3": "Three", "4": "Four"}
@@ -321,6 +323,19 @@ for file in path2.glob('*.py'):
     print(file)
 print("---------------------------------------------------")
 
+age = 36
+weight = 75
+txt = "My name is John, and I am {} and weigh {}"
+print(txt.format(age, weight))
+
+
+age = 36
+txt = f"      My name is John, and I am {age} years old"
+print(txt)
+print(type(txt))
+print(txt.strip())
+print("---------------------------------------------------")
+
 # Write a function to get the first n odd numbers from a list
 list1 = [10, 21, 4, 45, 66, 93, 67, 93, 74, 100, 33, 49]
 list2 = []
@@ -361,3 +376,33 @@ def palindrome():
 
 # palindrome()
 print("---------------------------------------------------")
+
+fruits = {"apple", "banana", "cherry"}
+more_fruits = ["orange", "mango", "grapes"]
+
+fruits.update(more_fruits)
+print(fruits)
+print("---------------------------------------------------")
+
+# Fizz Buzz
+for num in range(1, 101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz", end=" ")
+    elif num % 3 == 0:
+        print("Fizz", end=" ")
+    elif num % 5 == 0:
+        print("Buzz", end=" ")
+    else:
+        print(num, end=" ")
+print("\n---------------------------------------------------")
+
+# Fibonacci Sequence
+a = 0
+b = 1
+print(a, b, end=" ")
+for num in range(0, 20):
+    sum = a + b
+    print(sum, end=" ")
+    a = b
+    b = sum
+print("\n---------------------------------------------------")

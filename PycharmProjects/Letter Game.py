@@ -1,7 +1,8 @@
-word = input("Enter a name: ")
+# Write a program to replace the vowel letters with 'g' or 'G'
 
 
-def vowel(word):
+def vowel():
+    word = input("Enter a name: ")
     translation = ""
     for letter in word:
         if letter.islower():
@@ -19,4 +20,7 @@ def vowel(word):
     return translation
 
 
-print(vowel(word))
+print(vowel())
+
+
+

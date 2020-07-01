@@ -1,3 +1,4 @@
+# Create a ping-pong game in which two players play against each other and score every-time the ball crosses the lines
 import turtle
 import winsound
 
