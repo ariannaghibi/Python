@@ -1,8 +1,8 @@
 # Play rock/scissors/paper game against bot ten times and display the scores
 import random
 # Create a list for the bot to choose either of the three options. Then add the user's input to the bot's choice as a string and check if the result is in the win_list.
-bot_list = ['r', 's', 'p']
-win_list = ['rs', 'sp', 'pr']
+bot_list = ['rock', 'scissors', 'paper']
+win_list = ['rock'+'_'+'scissors', 'scissors'+'_'+'paper', 'paper'+'_'+'rock']
 counter = 0
 user_score = 0
 bot_score = 0
