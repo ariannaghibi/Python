@@ -1,5 +1,4 @@
 #Online Music Store
-
 In this project, we are going to build a model and fit this model with sample data based on existing users. Once the model learns the pattern in our data, we can predict the type of music our new users will likely to play based on their given age and gender.
 
 ##Installation
