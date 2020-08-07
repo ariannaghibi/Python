@@ -4,7 +4,10 @@ This project will do some basic analysis on the latest covid-19 data including t
 
 ## Installation
 Download https://www.anaconda.com/products/individual   
-In Anaconda CMD, type "Jupyter Notebook"    
+
+In Anaconda Prompt:
+>Jupyter Notebook
+    
 <br>Download the latest "covid_19_data.csv"
 https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset?select=covid_19_data.csv
 
