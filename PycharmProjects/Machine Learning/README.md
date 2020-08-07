@@ -1,17 +1,17 @@
-#Online Music Store
+# Online Music Store
 
 In this project, we are going to build a model and fit this model with sample data based on existing users. Once the model learns the pattern in our data, we can predict the type of music our new users will likely to play based on their given age and gender.
 
-##Installation
+## Installation
 
 Download https://www.anaconda.com/products/individual   
 In Anaconda CMD, type "Jupyter Notebook"
 
-###Needed package example to view flow-chart:
+### Needed package example to view flow-chart:
 
 For Atom: https://atom.io/packages/graphviz-preview-plus
 
-##Procedure
+## Procedure
 
 1- Import the Data  
 2- Clean the Data  
