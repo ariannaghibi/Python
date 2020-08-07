@@ -5,7 +5,8 @@ In this project, we are going to build a model and fit this model with sample da
 ## Installation
 
 Download https://www.anaconda.com/products/individual   
-In Anaconda CMD, type "Jupyter Notebook"
+In Anaconda Prompt:
+>Jupyter Notebook
 
 ### Needed package example to view flow-chart:
 
