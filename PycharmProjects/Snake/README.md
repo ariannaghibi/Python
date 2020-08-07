@@ -4,10 +4,10 @@ The game starts with a snake head and a food. As the snake eats the food, it'll 
 
 ## Game Controls
 
-Left Arrow Key:  Move Left
-Right Arrow Key:  Move Right
-Up Arrow Key: Move Up
-Down Arrow Key: Move Down
+Left Arrow Key:  Move Left  
+Right Arrow Key:  Move Right  
+Up Arrow Key: Move Up  
+Down Arrow Key: Move Down  
 
 
 
