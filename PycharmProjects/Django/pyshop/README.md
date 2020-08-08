@@ -4,10 +4,10 @@ In this project (Incomplete), The user can create various products and discounte
 
 ## Getting Started
 
-###Installation 
+### Installation 
 >pip install django==2.1.5
 
-###Execution
+### Execution
 To run server:
 >py manage.py runserver
 
