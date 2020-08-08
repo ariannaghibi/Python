@@ -2,17 +2,18 @@
 
 In this project, we are going to build a model and fit this model with sample data based on existing users. Once the model learns the pattern in our data, we can predict the type of music our new users will likely to play based on their given age and gender.
 
-## Installation
-
+## Getting Started
+### Installation
 Download https://www.anaconda.com/products/individual   
+
+#### Needed package example to view flow-chart:
+For Atom: https://atom.io/packages/graphviz-preview-plus
+
+### Execution
 In Anaconda Prompt:
 >Jupyter Notebook
 
-### Needed package example to view flow-chart:
-
-For Atom: https://atom.io/packages/graphviz-preview-plus
-
-## Procedure
+## Project Structure
 
 1- Import the Data  
 2- Clean the Data  
