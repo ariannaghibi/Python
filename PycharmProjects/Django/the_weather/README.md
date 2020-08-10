@@ -8,6 +8,7 @@ Sign up to get an API key and also check out some examples of API calls: https:/
 
 ### Installation 
 >pip install django==2.1.5
+
 >pip install requests
 
 ### Execution
