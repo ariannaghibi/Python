@@ -12,12 +12,6 @@ class Student:
             return False
 
 
-class Question:
-    def __init__(self, prompt, answer):
-        self.prompt = prompt
-        self.answer = answer
-
-
 class Chef:
     def make_chicken(self):
         print("The chef makes a chicken")
