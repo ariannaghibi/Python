@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<section class="hero is-primary" id = "top" style="background-color:lightskyblue">
+<section class="hero is-primary" id="top" style="background-color:lightskyblue">
     <div class="hero-body">
         <div class="container">
             <h1 class="title" style="text-align:center">
@@ -46,42 +46,40 @@
 </section>
 <section class="section" style="background-color:whitesmoke">
     <div class="container">
-        <div class="columns">
-            <div class="column is-offset-4 is-4">
-                {% for city_weather in weather_data %}
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-50x50">
-                                <img src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
-                            </figure>
+        <div class="column" style="display: flex; flex-wrap: wrap; justify-content: space-around">
+            {% for city_weather in weather_data %}
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-50x50">
+                            <img src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <span class="title">{{city_weather.city}}, {{city_weather.country}}</span>
+                                <br>
+                                <span class="subtitle">{{city_weather.temperature}}° F</span>
+                                <br>
+                                <span class="subtitle">Humidity: {{city_weather.humidity}}%</span>
+                                <br>
+                                <span class="subtitle">Wind: {{city_weather.wind}} mph</span>
+                                <br> {{city_weather.description}}
+                            </p>
                         </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <span class="title">{{city_weather.city}}, {{city_weather.country}}</span>
-                                    <br>
-                                    <span class="subtitle">{{city_weather.temperature}}° F</span>
-                                    <br>
-                                    <span class="subtitle">Humidity: {{city_weather.humidity}}%</span>
-                                    <br>
-                                    <span class="subtitle">Wind: {{city_weather.wind}} mph</span>
-                                    <br> {{city_weather.description}}
-                                </p>
-                            </div>
-                        </div>
-                        <!-- The 'X' button on each flex box will be created on the right hand side-->
-                        <div class="media-right">
-                            <!--This url will point to the 'delete_city' path in urls.py and pass the value 'city_weather.city'
-                            to the 'view.delete_city' function-->
-                            <a href="{% url 'delete_city' city_weather.city %}">
-                                <button class="delete"></button>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-                {% endfor %}
+                    </div>
+                    <!-- The 'X' button on each flex box will be created on the right hand side-->
+                    <div class="media-right">
+                        <!--This url will point to the 'delete_city' path in urls.py and pass the value 'city_weather.city'
+                        to the 'view.delete_city' function-->
+                        <a href="{% url 'delete_city' city_weather.city %}">
+                            <button class="delete"></button>
+                        </a>
+                    </div>
+                </article>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
