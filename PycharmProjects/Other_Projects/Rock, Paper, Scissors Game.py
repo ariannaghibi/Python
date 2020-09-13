@@ -7,7 +7,7 @@ counter = 0
 user_score = 0
 bot_score = 0
 tie_score = 0
-print("\nPlease type either 'rock', 'paper', or 'scissors' to try your luck against bot!\nWarning: If you enter any other phrase, you will automatically lose to bot!")
+print("\nPlease type either 'rock', 'paper', or 'scissors' to try your luck against bot!\n")
 while counter < 10:
     user_input = input("Your move: ")
     bot_input = random.choice(bot_list)
