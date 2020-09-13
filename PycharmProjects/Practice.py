@@ -373,7 +373,6 @@ def palindrome():
         else:
             print("Not a palindrome")
 
-
 # palindrome()
 print("---------------------------------------------------")
 
@@ -406,3 +405,34 @@ for num in range(0, 20):
     a = b
     b = sum
 print("\n---------------------------------------------------")
+
+# Fibonacci Sequence
+def fib_loop(n):
+    a = 0
+    b = 1
+    if n <= 1:
+        return 0
+    else:
+        print(a, b, end=" ")
+        for num in range(2, n):
+            sum = a + b
+            print(sum, end=" ")
+            a = b
+            b = sum
+
+
+print(fib_loop(5))
+print("---------------------------------------------------")
+
+# Fibonacci Sequence
+def FibRecursion(n):
+    if n <= 1:
+        return n
+    else:
+        return (FibRecursion(n - 1) + FibRecursion(n - 2))
+
+
+for i in range(5):
+    print(FibRecursion(i), end=" ")
+
+

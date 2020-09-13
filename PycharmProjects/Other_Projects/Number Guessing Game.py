@@ -18,4 +18,4 @@ while guess_num != secret_num:
             print("You got it!")
     except ValueError:
         print("Only numbers are allowed!")
-print("Number if tries: " + str(guess_count))
+print("Number of tries: " + str(guess_count))
